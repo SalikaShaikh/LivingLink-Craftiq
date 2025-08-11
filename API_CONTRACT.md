@@ -1,4 +1,4 @@
-# 📜 API Contract – LivingLink (Craftiq)
+#  API Contract – LivingLink (Craftiq)
 
 This document defines the contract between the **frontend** and **backend** for the LivingLink Residential Society Management System.
 
