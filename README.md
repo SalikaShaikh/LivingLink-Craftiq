@@ -7,10 +7,10 @@ LivingLink is a modern residential society management platform that connects res
   
 ## Team Members
 - [Member 1 Salika Shaikh](https://github.com/SalikaShaikh)
-- [Member 2 Vaishali Naik]
-- [Member 3 Ankith Binagekar]
-- [Member 4 Utkarsha Mayekar]
-- [Member 5 Navisha Shetkar]
+- [Member 2 Vaishali Naik](https://github.com/mom-princess)
+- [Member 3 Ankith Binagekar](https://github.com/AnkithBinagekar)
+- [Member 4 Utkarsha Mayekar](https://github.com/Utkarsha015)
+- [Member 5 Navisha Shetkar](https://github.com/NavishaShetkar)
 
 ## Tech Stack
 TBD
