@@ -279,9 +279,3 @@ This document defines the contract between the **frontend** and **backend** for 
 
 ---
 
-**Note:**  
-- All **protected routes** will require JWT token in the request header:  
-  ```
-  Authorization: Bearer <token>
-  ```
-- All dates/times follow **ISO 8601 format** (`YYYY-MM-DDTHH:MM:SSZ`).
