@@ -23,10 +23,3 @@ npm run dev
 ```
 http://localhost:5000/api-docs
 ```
-
-## Notes
-- Data is stored in-memory, so it resets when the server restarts.
-- Protected routes require:
-```
-Authorization: Bearer <token>
-```
