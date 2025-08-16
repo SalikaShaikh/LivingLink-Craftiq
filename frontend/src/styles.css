@@ -1,0 +1,384 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #415A77;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adjust this value for desired spacing */
+}
+
+.header-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header-nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    flex: 1;
+}
+
+.maintenance-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+}
+
+footer {
+    background-color: #0D1B2A;
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+    flex-shrink: 0;
+}
+
+.footer-contact {
+    margin-bottom: 10px;
+}
+
+.footer-contact p, .footer-contact a {
+    color: #fff;
+    margin: 4px 0;
+    text-decoration: none;
+    font-size: 15px;
+    font-size: 14px; /* slightly smaller on small screens */
+    word-wrap: break-word; /* prevents text overflow */
+}
+
+.footer-social {
+    margin-top: 8px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin-right: 8px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background: #007bff;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.social-icon.instagram {
+    background: #E1306C;
+}
+
+.social-icon.facebook {
+    background: #3b5998;
+}
+
+.social-icon:hover {
+    opacity: 0.8;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.sign-in-btn {
+    padding: 8px 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 0;
+    vertical-align: middle;
+}
+
+.intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 30px;
+    background: #f5f7fa;
+    margin-bottom: 20px;
+}
+
+.intro-left {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.intro-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.intro-image {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.services-section {
+    padding: 40px 30px;
+    background: #e9ecef;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.services-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #415A77;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.service-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(65, 90, 119, 0.08);
+    padding: 24px 18px;
+    width: 220px;
+    text-align: center;
+}
+
+.service-item h3 {
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.service-item p {
+    font-size: 15px;
+    color: #333;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    padding: 40px 30px;
+    background: #f5f7fa;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.about-left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.about-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.about-right {
+    flex: 2;
+    padding-left: 40px;
+}
+
+.about-right h2 {
+    text-align: left;
+    color: #415A77;
+    margin-bottom: 20px;
+}
+
+.about-right p {
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+    max-width: 700px;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.signin-section {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 32px 24px;
+    background: #f5f7fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(119, 141, 169, 1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
+.signin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.signin-form label {
+    text-align: left;
+    font-weight: 500;
+    color: #415A77;
+}
+
+.signin-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.signin-form .sign-in-btn {
+    margin-top: 10px;
+}
+
+.signup-link {
+    margin-top: 18px;
+    font-size: 15px;
+}
+
+.signup-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+.maintenance-section {
+    padding: 40px 30px;
+}
+
+.maintenance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(65, 90, 119, 0.08);
+}
+
+.maintenance-table th, .maintenance-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.maintenance-table th {
+    background: #415A77;
+    color: #fff;
+}
+
+.status-select {
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.status-cell.Pending {
+  color: orange;
+}
+
+.status-cell.Ongoing {
+  color: blue;
+}
+
+.status-cell.Done {
+  color: green;
+}
+
+.table-wrapper {
+  overflow-x: auto; /* adds horizontal scroll if table is too wide */
+}
+
+.maintenance-table {
+  min-width: 600px; /* optional, ensures table doesn’t shrink too much */
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .header-nav {
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+
+    .intro-section, .about-section, .services-section {
+        flex-direction: column;
+        padding: 20px 15px;
+    }
+
+    .intro-left, .intro-right, .about-left, .about-right {
+        padding: 0;
+    }
+
+    .services-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
