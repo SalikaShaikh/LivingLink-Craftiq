@@ -1,0 +1,89 @@
+.treasurer-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.summary-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 20%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.tabs button {
+  margin: 0 5px;
+  padding: 10px 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tabs button:hover {
+  background: #0056b3;
+}
+
+.tab-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.data-table th, .data-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.data-table th {
+  background: #f0f0f0;
+}
+
+.btn {
+  background: #28a745;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #218838;
+}
+
+.chart-box {
+  background: #f9f9f9;
+  border: 1px dashed #ccc;
+  padding: 30px;
+  text-align: center;
+  margin: 15px 0;
+}
