@@ -1,25 +1,74 @@
 // SignIn.jsx
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // for client-side routing
+import { Link, useNavigate } from "react-router-dom"; 
 import "../styles.css"; 
 import logo from "./logo.png"; 
 
 const SignIn = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
     role: "resident",
   });
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // API call can go here
+    setError("");
+
+    try {
+      const response = await fetch("http://localhost:5000/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: formData.email,
+          password: formData.password,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        setError(data.error || "Login failed");
+        return;
+      }
+
+      // Save token to localStorage
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("role", data.role);
+
+      alert("Login successful!");
+
+      // Redirect based on role
+      switch (data.role) {
+        case "resident":
+          navigate("/resident-home");
+          break;
+        case "secretary":
+          navigate("/secretary-home");
+          break;
+        case "treasurer":
+          navigate("/treasurer-home");
+          break;
+        case "maintenance":
+          navigate("/maintenance");
+          break;
+        case "security":
+          navigate("/security");
+          break;
+        default:
+          navigate("/");
+      }
+    } catch (err) {
+      console.error("Error during login:", err);
+      setError("Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -74,6 +123,8 @@ const SignIn = () => {
               Sign In
             </button>
           </form>
+
+          {error && <p style={{ color: "red" }}>{error}</p>}
 
           <p className="signup-link">
             Don't have an account? <Link to="/signup">Sign Up</Link>

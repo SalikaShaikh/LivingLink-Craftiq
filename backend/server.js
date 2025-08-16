@@ -184,6 +184,42 @@ app.post('/api/auth/login', (req, res) => {
   return res.status(200).json({ token, role: user.role });
 });
 
+/**
+ * @swagger
+ * /api/auth/users:
+ *   get:
+ *     tags: [Auth]
+ *     summary: Get all registered users (for debugging only)
+ *     responses:
+ *       200:
+ *         description: List of registered users
+ */
+app.get('/api/auth/users', (req, res) => {
+  res.status(200).json(users);
+});
+
+/**
+ * @swagger
+ * /api/auth/me:
+ *   get:
+ *     tags: [Auth]
+ *     summary: Get current logged-in user info
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Current user details
+ */
+app.get('/api/auth/me', authenticateToken, (req, res) => {
+  const user = users.find(u => u.id === req.user.id);
+  if (!user) return res.status(404).json({ error: "User not found" });
+  
+  // Don't send hashed password
+  const { password, ...safeUser } = user;
+  return res.status(200).json(safeUser);
+});
+
+
 /* ----------------- COMPLAINTS ----------------- */
 /**
  * @swagger
