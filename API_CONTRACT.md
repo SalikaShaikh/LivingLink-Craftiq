@@ -3,7 +3,7 @@
 This document describes the API endpoints for LivingLink, A Residential Society Management System, a comprehensive platform for managing residential society operations including authentication, bookings, complaints, finances, maintenance, notices, payments, users, and visitors.
 
 ## Base URL
-http://localhost:3000/api (or your deployed server URL)
+http://localhost:3000/api
 
 ## Authentication
 All endpoints (except auth endpoints) require JWT authentication via Bearer token in the Authorization header.
