@@ -62,19 +62,19 @@ export default function RegisterPage() {
           {success && <div className="alert alert-success">{success}</div>}
           <form onSubmit={handleSubmit} className="auth-form">
             <div className="form-group">
-              <label>Name</label>
+              <label className="form-label">Name</label>
               <input name="name" type="text" className="form-control" required value={form.name} onChange={handleChange} />
             </div>
             <div className="form-group">
-              <label>Email</label>
+              <label className="form-label">Email</label>
               <input name="email" type="email" className="form-control" required value={form.email} onChange={handleChange} />
             </div>
             <div className="form-group">
-              <label>Password</label>
+              <label className="form-label">Password</label>
               <input name="password" type="password" className="form-control" required value={form.password} onChange={handleChange} />
             </div>
             <div className="form-group">
-              <label>Role</label>
+              <label className="form-label">Role</label>
               <select name="role" className="form-select" value={form.role} onChange={handleChange}>
                 <option value="resident">Resident</option>
                 <option value="secretary">Secretary</option>

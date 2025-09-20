@@ -40,7 +40,7 @@ export default function DashboardHome() {
         <div className="col-md-6 mb-4">
           <div className="card h-100">
             <div className="card-header d-flex justify-content-between align-items-center">
-              <h5 className="mb-0">Recent Notices</h5>
+              <h5 className="mb-0" style={{ color: 'var(--color-off-white)' }}>Recent Notices</h5>
               <Link to="/resident/notices" className="btn btn-sm btn-outline-primary">
                 View All
               </Link>
@@ -74,7 +74,7 @@ export default function DashboardHome() {
         <div className="col-md-6 mb-4">
           <div className="card h-100">
             <div className="card-header d-flex justify-content-between align-items-center">
-              <h5 className="mb-0">Recent Payments</h5>
+              <h5 className="mb-0" style={{ color: 'var(--color-off-white)' }}>Recent Payments</h5>
               <Link to="/resident/payments" className="btn btn-sm btn-outline-primary">
                 View All
               </Link>
