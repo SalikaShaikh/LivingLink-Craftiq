@@ -20,21 +20,21 @@ Authentication: JWT (JSON Web Tokens)
 API Documentation: Swagger
 
 ## Installation Setup
-### 1.Clone the repository
+### 1. Clone the repository
 git clone https://github.com/SalikaShaikh/LivingLink-Craftiq.git
 cd LivingLink
 
-### 2.Install dependencies
+### 2. Install dependencies
 npm install
 
-### 3.Set up environment variables
+### 3. Set up environment variables
 Create a .env file in the root directory with the following variables:
 MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
 PORT=5000
 
-### 4.Start the development server
+### 4. Start the development server
 npm run dev
 
-### 5.Access the application
+### 5. Access the application
 Open your browser and navigate to http://localhost:3000
